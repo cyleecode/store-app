@@ -4,7 +4,11 @@ Powered by [Ionic Angular](https://ionicframework.com/docs/angular/overview) (we
 
 ## How It Works
 
-TBD
+Design a human store to track activity state
+
+- Tab 1 activity input interface
+- Tab 2 overview of activities
+- Tab 3 TBD
 
 ## Feature Overview
 
