@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsModule } from '@ngxs/store';
+import { MovementState } from './state/movement-controller/state';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -18,7 +19,7 @@ import { NgxsModule } from '@ngxs/store';
     IonicModule.forRoot(),
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgxsModule.forRoot([]),
+    NgxsModule.forRoot([MovementState]),
     NgxsLoggerPluginModule.forRoot(),
     NgxsReduxDevtoolsPluginModule.forRoot()
   ],

@@ -1,13 +1,14 @@
-<div id="container">
-  <strong>Human</strong>
-  <p>want to do</p>
-  <br />
-  <p><button mat-button>READ</button></p>
-  <br />
-  <p><button mat-button>WRITE</button></p>
-  <br />
-  <p><button mat-button>UPDATE</button></p>
-  <br />
-  <p><button mat-button>REMOVE</button></p>
-  <br />
+<div id="container">Character image</div>
+<div class="controller">
+  <mat-grid-list cols="3" rowHeight="80px">
+    <mat-grid-tile colspan="1" rowspan="1"></mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1" (click)="moveUp()">up</mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1"></mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1" (click)="moveLeft()">left</mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1"></mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1" (click)="moveRight()">right</mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1"></mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1" (click)="moveDown()">down</mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1"></mat-grid-tile>
+  </mat-grid-list>
 </div>
