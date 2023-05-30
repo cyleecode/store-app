@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { State, Action, StateContext } from '@ngxs/store';
+import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { Movement } from './action';
 import { MovementStateModel } from './model';
 
@@ -8,7 +8,10 @@ import { MovementStateModel } from './model';
 })
 @Injectable()
 export class MovementState {
-  @Action(Movement.Up)
+  @Selector([MovementState]) static getMovement(state: MovementStateModel) {
+    return state.move;
+  }
+  @Action(Movement.Up, { cancelUncompleted: true })
   movementUp(ctx: StateContext<MovementStateModel>) {
     const state = ctx.getState();
     ctx.setState({
